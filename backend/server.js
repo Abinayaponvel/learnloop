@@ -10,10 +10,11 @@ const app = express();
 const allowedOrigins = [
   'http://localhost:5173',
   'http://127.0.0.1:5173',
-  'http://localhost:5000',
+  'https://learnloop-g29c.onrender.com',
+  'https://learnloopfinal.netlify.app',
   'http://127.0.0.1:5000',
   ...(process.env.CLIENT_URL ? process.env.CLIENT_URL.split(',').map((origin) => origin.trim()) : [])
-];
+].filter(Boolean);
 
 app.use(cors({
   origin(origin, callback) {

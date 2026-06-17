@@ -21,7 +21,7 @@ npm run dev
 Base URL:
 
 ```text
-http://localhost:5000/api/v1
+https://learnloop-g29c.onrender.com/api/v1
 ```
 
 Health check:
