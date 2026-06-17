@@ -10,7 +10,8 @@ const app = express();
 const allowedOrigins = [
   'http://localhost:5173',
   'http://127.0.0.1:5173',
-  'https://learnloop-final.netlify.app/',
+  'https://learnloop-final.netlify.app',
+  'https://learnloop-g29c.onrender.com',
   'http://127.0.0.1:5000',
   ...(process.env.CLIENT_URL ? process.env.CLIENT_URL.split(',').map((origin) => origin.trim()) : [])
 ].filter(Boolean);
