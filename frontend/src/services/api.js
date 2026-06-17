@@ -2,7 +2,7 @@ import axios from 'axios';
 import toast from 'react-hot-toast';
 import { storage } from '../utils/storage';
 
-const API_URL = import.meta.env.VITE_API_URL || '/api/v1';
+const API_URL = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? 'https://learnloop-g29c.onrender.com/api/v1' : '/api/v1');
 
 export const api = axios.create({
   baseURL: API_URL,

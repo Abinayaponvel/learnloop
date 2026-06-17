@@ -148,7 +148,7 @@ export function MentorDashboard() {
     const token = storage.get('learnloop_token');
     if (!token) return;
 
-    const base = import.meta.env.VITE_API_URL || '/api/v1';
+    const base = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? 'https://learnloop-g29c.onrender.com/api/v1' : '/api/v1');
     const url = `${base}/mentorships/stream?token=${encodeURIComponent(token)}`;
     let es;
     try {
